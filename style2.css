@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #007acc;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+.header button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: #e55b00;
+}
+
+/* Sections */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #007acc;
+}
+
+/* Registration and Job Listings Cards */
+.registration, .job-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.register-card, .job-card, .booth {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-card h3, .job-card h3, .booth h3 {
+    color: #007acc;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.register-card p, .job-card p, .booth p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #666;
+}
+
+.register-card button, .job-card button, .booth button {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-card button:hover, .job-card button:hover, .booth button:hover {
+    background-color: #005f99;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .registration, .job-listing {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .register-card, .job-card {
+        width: 300px;
+    }
+}

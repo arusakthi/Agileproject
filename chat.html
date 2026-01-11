@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant Chat</title>
+</head>
+<style>
+    /* Styles for Chat Page */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f4f4f4;
+    }
+
+    .chat-container {
+        width: 90%;
+        max-width: 600px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .chat-header {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .chat-messages {
+        padding: 1em;
+        height: 400px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .message {
+        max-width: 70%;
+        padding: 0.8em;
+        border-radius: 10px;
+        font-size: 1em;
+    }
+
+    .user-message {
+        align-self: flex-end;
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+    .bot-message {
+        align-self: flex-start;
+        background-color: #ddd;
+    }
+
+    .chat-input-container {
+        display: flex;
+        border-top: 1px solid #ddd;
+    }
+
+    .chat-input {
+        flex-grow: 1;
+        padding: 1em;
+        border: none;
+        outline: none;
+    }
+
+    .send-button {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 0.75em 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .send-button:hover {
+        background-color: #218838;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+</style>
+<body>
+
+    <p>Welcome to our virtual booth! Chat with us to learn more about job opportunities.</p>
+    <div class="chat-container">
+        <div class="chat-header">
+            Virtual Assistant Chat
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message message">Hello! How can I help you today?</div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+<script>
+    let awaitingNameSuggestion = false;
+    let botName = "";
+
+    // Function to send message from user
+    function sendMessage() {
+        const input = document.getElementById("chat-input");
+        const message = input.value.trim();
+        if (message) {
+            // Display user message
+            const userMessage = document.createElement("div");
+            userMessage.classList.add("user-message", "message");
+            userMessage.textContent = message;
+            document.getElementById("chat-messages").appendChild(userMessage);
+
+            // Clear input field
+            input.value = "";
+
+            // Scroll to bottom
+            document.getElementById("chat-messages").scrollTop = document.getElementById("chat-messages").scrollHeight;
+
+            // Determine bot response based on user message
+            let botResponse;
+            if (awaitingNameSuggestion) {
+                botName = message;
+                botResponse = `${botName}? Oh, that's cool! Keep going. Ask your doubt, I am here to clarify.`;
+                awaitingNameSuggestion = false;
+            } else if (message.toLowerCase() === "hi") {
+                botResponse = "Hi! How was your day?";
+            } else if (message.toLowerCase() === "fine") {
+                botResponse = "Oh great! Keep going. Ask your doubt, I am here to clarify.";
+            } else if (message.toLowerCase().includes("name")) {
+                botResponse = "Sorry, I don't have any name. Will you suggest one?";
+                awaitingNameSuggestion = true;
+            } else {
+                botResponse = "I'm here to assist you. Could you please provide more details?";
+            }
+
+            // Display bot response
+            setTimeout(() => {
+                const botMessage = document.createElement("div");
+                botMessage.classList.add("bot-message", "message");
+                botMessage.textContent = botResponse;
+                document.getElementById("chat-messages").appendChild(botMessage);
+
+                // Scroll to bottom
+                document.getElementById("chat-messages").scrollTop = document.getElementById("chat-messages").scrollHeight;
+            }, 1000);
+        }
+    }
+
+    // Handle Enter key press to send message
+    function handleKeyPress(event) {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    }
+</script>
+
+</body>
+</html>

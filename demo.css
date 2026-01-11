@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.section {
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Header Section */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+
+.header button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.header button:hover {
+    background-color: #0056b3;
+}
+
+/* Registration Section */
+.registration {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.register-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-card button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.register-card button:hover {
+    background-color: #218838;
+}
+
+/* Job Listings Section */
+.job-listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.job-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.job-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.job-card h3 {
+    color: #333;
+    margin: 0.5em 0;
+}
+
+.job-card p {
+    color: #666;
+}
+
+.job-card button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.job-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Virtual Booth Section */
+.booth {
+    background-color: #fff;
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booth button {
+    background-color: #ffc107;
+    color: #333;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.booth button:hover {
+    background-color: #e0a800;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - Online Job Fair</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Styles */
+    
+
+    .section {
+        padding: 2em;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    .job-listing {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .job-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 1em;
+        width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .job-card img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+
+    .job-card h3 {
+        color: #333;
+        margin: 0.5em 0;
+    }
+
+    .job-card p {
+        color: #666;
+    }
+
+    .job-card button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+
+    .job-card button:hover {
+        background-color: #0056b3;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .section {
+        padding: 2em;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    .job-listing {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .job-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 1em;
+        width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .job-card img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+
+    .job-card h3 {
+        color: #333;
+        margin: 0.5em 0;
+    }
+
+    .job-card p {
+        color: #666;
+    }
+
+    .job-card button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+
+    .job-card button:hover {
+        background-color: #0056b3;
+    }
+    .back-button {
+        display: block;
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
+</style>
+<body>
+
+    <!-- Job Listings Section -->
+    <section id="jobs" class="section">
+        <h2>Job Listings</h2>
+        <div class="job-listing">
+            <!-- Existing Jobs -->
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\software1.jpg" alt="Software Engineer">
+                <h3>Software Engineer</h3>
+                <p>Company ABC</p>
+                <p>Develop and maintain high-quality software applications.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\marketing1.jpg" alt="Marketing Specialist">
+                <h3>Marketing Specialist</h3>
+                <p>Company XYZ</p>
+                <p>Design and execute marketing campaigns to enhance brand presence.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\data1.jpg" alt="Data Analyst">
+                <h3>Data Analyst</h3>
+                <p>Company DEF</p>
+                <p>Analyze data to provide actionable insights for business growth.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\ux.png" alt="UX Designer">
+                <h3>UX Designer</h3>
+                <p>Company GHI</p>
+                <p>Create user-friendly interfaces to enhance user experience.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\projectmanager.jpg" alt="Project Manager">
+                <h3>Project Manager</h3>
+                <p>Company JKL</p>
+                <p>Coordinate teams to ensure timely and successful project delivery.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\hr.jpg" alt="Human Resources Manager">
+                <h3>Human Resources Manager</h3>
+                <p>Company MNO</p>
+                <p>Oversee recruitment and manage employee relations programs.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <!-- Additional Jobs -->
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\sales.jpg" alt="Sales Executive">
+                <h3>Sales Executive</h3>
+                <p>Company PQR</p>
+                <p>Drive sales and build relationships with clients.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\devops.webp" alt="DevOps Engineer">
+                <h3>DevOps Engineer</h3>
+                <p>Company STU</p>
+                <p>Implement CI/CD pipelines and maintain infrastructure.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\cyber.jpg" alt="Cybersecurity Specialist">
+                <h3>Cybersecurity Specialist</h3>
+                <p>Company VWX</p>
+                <p>Protect company assets by securing systems and data.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\content.jpg" alt="Content Writer">
+                <h3>Content Writer</h3>
+                <p>Company YZA</p>
+                <p>Create engaging content for various digital platforms.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\financial.jpg" alt="Financial Analyst">
+                <h3>Financial Analyst</h3>
+                <p>Company BCD</p>
+                <p>Analyze financial data and provide business insights.</p>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <img src="C:\Users\sakthivel\OneDrive\Desktop\project(web)\qa.jpg" alt="Quality Assurance Tester">
+                <h3>Quality Assurance Tester</h3>
+                <p>Company EFG</p>
+                <p>Ensure software quality through rigorous testing.</p>
+                <button>Apply Now</button>
+            </div>
+        </div>
+
+                <!-- Existing Jobs -->
+                <!-- (Add the existing job cards here, as per the initial HTML) -->
+    
+                <!-- Additional Jobs -->
+                <div class="job-card">
+                    <img src="cloudengineer.png" alt="Cloud Engineer">
+                    <h3>Cloud Engineer</h3>
+                    <p>Company HJK</p>
+                    <p>Manage cloud infrastructure and optimize system performance.</p>
+                    <button>Apply Now</button>
+                </div>
+                <div class="back-button">
+                    <a href="demo.html" style="color: #007BFF; text-decoration: none;">Back to Home</a>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Online Job Fair. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
