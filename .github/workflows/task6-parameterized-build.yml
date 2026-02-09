@@ -1,0 +1,17 @@
+name: Task 6 - Parameterized Build (Git CI)
+
+on:
+  workflow_dispatch:
+    inputs:
+      USERNAME:
+        description: 'Enter user name'
+        required: true
+        default: 'GitUser'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print USERNAME parameter
+        run: echo "USERNAME value is: ${{ github.event.inputs.USERNAME }}"
