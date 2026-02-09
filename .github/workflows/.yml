@@ -1,0 +1,14 @@
+name: Hello-GitHub-Actions
+
+# Simple CI workflow to print a message
+
+on:
+  workflow_dispatch:   # manual trigger (like Build Now in Jenkins)
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello Message
+        run: echo "Hello GitHub Actions"
