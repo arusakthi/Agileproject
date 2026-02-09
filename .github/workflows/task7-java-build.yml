@@ -1,0 +1,26 @@
+name: Task 7 - Java Build (Git CI)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-java:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile Java program
+        run: javac Hello.java
+
+      - name: Run Java program
+        run: java Hello
