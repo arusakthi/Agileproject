@@ -1,0 +1,17 @@
+name: Task 5 - Poll SCM Trigger (Git CI)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: CI Trigger Proof
+        run: echo "Build triggered automatically on Git commit"
