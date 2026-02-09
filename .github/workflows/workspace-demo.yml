@@ -1,0 +1,20 @@
+name: Workspace-Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  workspace-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create text file in workspace
+        run: |
+          echo "This file is created inside GitHub Actions workspace" > demo.txt
+
+      - name: Display file contents
+        run: |
+          cat demo.txt
