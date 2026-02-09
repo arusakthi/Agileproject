@@ -1,0 +1,18 @@
+name: Git-Integration-Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  git-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: List files in workspace
+        run: ls
+
+      - name: Display sample file
+        run: cat chat.html
